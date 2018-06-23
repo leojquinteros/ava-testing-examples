@@ -42,7 +42,31 @@ const players = [
 ]
 
 function startGame (players, targets) {
-  
-  
+  var player, score, winnerPlayerID
+  var maxScore = 0
 
+  for (var turn = 1; turn <= 9; turn++) {
+    
+    player = getCurrentPlayer(turn)
+    score = getScore(player)
+
+    
+
+  
+  }
+}
+
+function getCurrentPlayer(turn) {
+  var shootAngle
+  var player = players.filter((player) => {
+    return player.shots.filter((shot) => {
+      
+      return shot.turn === turn
+    })
+  })
+  return {
+    player
+  }
+    
+  
 }

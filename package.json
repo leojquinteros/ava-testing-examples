@@ -1,15 +1,29 @@
 {
-  "name": "neginet-test",
+  "name": "ava-testing-examples",
   "version": "1.0.0",
-  "description": "Neginet Test",
+  "description": "ava-testing-examples",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "lint": "standard --fix"
+    "lint": "standard --fix",
+    "test": "ava --verbose"
+  },
+  "ava": {
+		"files": [
+			"test/*.js"
+		],
+		"sources": [
+			"src/*.{js,jsx}",
+			"!dist/**/*"
+		],
+    "failFast": false
   },
   "author": "Leonel Quinteros",
   "license": "ISC",
   "dependencies": {
     "standard": "^11.0.1"
+  },
+  "devDependencies": {
+    "ava": "1.0.0-beta.6"
   }
 }
