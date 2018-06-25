@@ -10,8 +10,8 @@ exports.nLongestLines = (n, array) => {
   if (n >= array.length) {
     return array
   }
-  let ordered = array.sort((a,b) => {
-    return b.length-a.length
+  let ordered = array.sort((a, b) => {
+    return b.length - a.length
   })
   return ordered.splice(0, n)
 }

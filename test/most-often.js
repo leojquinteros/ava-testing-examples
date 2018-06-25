@@ -15,7 +15,9 @@ test('most often - valid non-empty values', t => {
 })
 
 test('most often - empty values', t => {
-  const value = target.mostOfen(5, [])
+  var value = target.mostOfen(5, [])
+  t.is(value, undefined)
+  value = target.mostOfen(5, undefined)
   t.is(value, undefined)
   t.pass()
 })
