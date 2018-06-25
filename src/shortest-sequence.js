@@ -6,22 +6,17 @@
 //    increasing it by 1; more precisely: A[i] = A[i-1] * 2 or A[i] = A[i-1] + 1, for i>=1
 // INPUT: 18 -> OUTPUT: [1,2,4,8,9,18]
 
-const sequence = (number) => {
-  return 2 * number
-  //return 1 + number
-}
-
 exports.shortestSequence = (number) => {
-  let array = [1]
-  if (number === 1) {
-    return array
+  if(!number || number <= 0) return
+  let array = [number]
+  while (number !== 1) {
+    let temp = number % 2
+    if (temp === 0) {
+      number = number/2  
+    } else if (temp === 1){
+      number = number -1
+    }
+    array.unshift(number)
   } 
-  let i = 1
-  let found = false
-  do {
-    array[i] = sequence(number)
-    found = array[i] === number
-    i++
-  } while (!found || array[i] >= number)
   return array
 }

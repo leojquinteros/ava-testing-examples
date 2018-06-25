@@ -9,13 +9,13 @@
     "test": "ava --verbose"
   },
   "ava": {
-		"files": [
-			"test/*.js"
-		],
-		"sources": [
-			"src/*.{js,jsx}",
-			"!dist/**/*"
-		],
+    "files": [
+      "test/*.js"
+    ],
+    "sources": [
+      "src/*.{js,jsx}",
+      "!dist/**/*"
+    ],
     "failFast": false
   },
   "author": "Leonel Quinteros",
