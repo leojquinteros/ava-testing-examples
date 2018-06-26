@@ -4,7 +4,6 @@
   "description": "ava-testing-examples",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
     "lint": "standard --fix",
     "test": "ava --verbose"
   },
